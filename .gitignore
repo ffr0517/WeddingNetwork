@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# PRIVACY: never commit raw guest data
+*.csv
+*.RData
+*.Rhistory
+*.RProj
+*.Rproj

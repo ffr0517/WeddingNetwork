@@ -1,0 +1,2739 @@
+{
+  "nodes": [
+    {
+      "id": "BRIDE",
+      "x": 2.9697,
+      "y": 0.5338,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 105,
+      "description": "To us, you're a natural connector who links different circles of friends, and we hope you help make new connections on the day.",
+      "matchId": "56",
+      "degree": 59,
+      "isSpecial": true
+    },
+    {
+      "id": "GROOM",
+      "x": 2.8599,
+      "y": 1.3236,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 105,
+      "description": "To us, you're someone many people know and feel connected to, and we hope you feel all that love all around you on the day.",
+      "matchId": "49",
+      "degree": 46,
+      "isSpecial": true
+    },
+    {
+      "id": "48",
+      "x": 0.1837,
+      "y": 0.8565,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 33.66,
+      "description": "To us, you're a gentle bridge between different parts of our world, and we hope the day feels just as welcoming.",
+      "matchId": "50",
+      "degree": 3,
+      "isSpecial": false
+    },
+    {
+      "id": "25",
+      "x": 7.676,
+      "y": 1.8569,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 20.95,
+      "description": "To us, you're someone with a unique place in our life, and we hope the day feels just as unique for you.",
+      "matchId": "7",
+      "degree": 8,
+      "isSpecial": false
+    },
+    {
+      "id": "49",
+      "x": -0.7979,
+      "y": -0.5442,
+      "community": "Burgundy",
+      "communityHex": "#902125",
+      "size": 25.09,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "43",
+      "degree": 9,
+      "isSpecial": false
+    },
+    {
+      "id": "50",
+      "x": 4.8832,
+      "y": -1.3392,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 31.33,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "48",
+      "degree": 10,
+      "isSpecial": false
+    },
+    {
+      "id": "16",
+      "x": 5.4136,
+      "y": 1.822,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 37.36,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "32",
+      "degree": 15,
+      "isSpecial": false
+    },
+    {
+      "id": "7",
+      "x": 3.2821,
+      "y": 2.1094,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 21.69,
+      "description": "To us, you're someone who brings different friends together, and we hope the day brings those worlds together too.",
+      "matchId": "25",
+      "degree": 18,
+      "isSpecial": false
+    },
+    {
+      "id": "21",
+      "x": -0.4935,
+      "y": 0.1285,
+      "community": "Burgundy",
+      "communityHex": "#902125",
+      "size": 30.18,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "43",
+      "degree": 13,
+      "isSpecial": false
+    },
+    {
+      "id": "43",
+      "x": 2.615,
+      "y": 0.1243,
+      "community": "Burgundy",
+      "communityHex": "#902125",
+      "size": 34.87,
+      "description": "To us, you're a gentle bridge between different parts of our world, and we hope the day feels just as welcoming.",
+      "matchId": "49",
+      "degree": 7,
+      "isSpecial": false
+    },
+    {
+      "id": "32",
+      "x": -1.0376,
+      "y": 1.6537,
+      "community": "Ivory",
+      "communityHex": "#efebe4",
+      "size": 15.17,
+      "description": "To us, you're a gentle bridge between different parts of our world, and we hope the day feels just as welcoming.",
+      "matchId": "25",
+      "degree": 8,
+      "isSpecial": false
+    },
+    {
+      "id": "27",
+      "x": 0.7472,
+      "y": -0.6831,
+      "community": "Burgundy",
+      "communityHex": "#902125",
+      "size": 33.31,
+      "description": "To us, you're a gentle bridge between different parts of our world, and we hope the day feels just as welcoming.",
+      "matchId": "49",
+      "degree": 9,
+      "isSpecial": false
+    },
+    {
+      "id": "37",
+      "x": -0.4158,
+      "y": 0.4314,
+      "community": "Burgundy",
+      "communityHex": "#902125",
+      "size": 32.35,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "48",
+      "degree": 11,
+      "isSpecial": false
+    },
+    {
+      "id": "29",
+      "x": 5.3398,
+      "y": 2.6387,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 23.88,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "32",
+      "degree": 12,
+      "isSpecial": false
+    },
+    {
+      "id": "34",
+      "x": 5.8625,
+      "y": 0.4155,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 30.65,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "48",
+      "degree": 9,
+      "isSpecial": false
+    },
+    {
+      "id": "22",
+      "x": -1.1906,
+      "y": 0.2333,
+      "community": "Burgundy",
+      "communityHex": "#902125",
+      "size": 35.57,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "43",
+      "degree": 13,
+      "isSpecial": false
+    },
+    {
+      "id": "42",
+      "x": -2.3522,
+      "y": -0.3661,
+      "community": "Burgundy",
+      "communityHex": "#902125",
+      "size": 25.27,
+      "description": "To us, you're someone whose friendships span different circles, and we hope you feel comfortable wherever you find yourself on the day.",
+      "matchId": "49",
+      "degree": 9,
+      "isSpecial": false
+    },
+    {
+      "id": "51",
+      "x": 3.7679,
+      "y": -1.3146,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 25.64,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "48",
+      "degree": 10,
+      "isSpecial": false
+    },
+    {
+      "id": "52",
+      "x": 5.8693,
+      "y": -1.2073,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 30.48,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "60",
+      "degree": 10,
+      "isSpecial": false
+    },
+    {
+      "id": "53",
+      "x": 4.5366,
+      "y": -1.1306,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 28.84,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "48",
+      "degree": 10,
+      "isSpecial": false
+    },
+    {
+      "id": "19",
+      "x": 6.2408,
+      "y": 2.0169,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 34.14,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "25",
+      "degree": 13,
+      "isSpecial": false
+    },
+    {
+      "id": "46",
+      "x": 2.4533,
+      "y": 2.8511,
+      "community": "Rose",
+      "communityHex": "#efcaca",
+      "size": 26.78,
+      "description": "To us, you're someone whose friendships span different circles, and we hope you feel comfortable wherever you find yourself on the day.",
+      "matchId": "67",
+      "degree": 8,
+      "isSpecial": false
+    },
+    {
+      "id": "12",
+      "x": 2.7772,
+      "y": 2.4437,
+      "community": "Rose",
+      "communityHex": "#efcaca",
+      "size": 25.35,
+      "description": "To us, you're someone who brings different friends together, and we hope the day brings those worlds together too.",
+      "matchId": "55",
+      "degree": 12,
+      "isSpecial": false
+    },
+    {
+      "id": "54",
+      "x": -0.7884,
+      "y": 2.0046,
+      "community": "Ivory",
+      "communityHex": "#efebe4",
+      "size": 22.85,
+      "description": "To us, you're a gentle bridge between different parts of our world, and we hope the day feels just as welcoming.",
+      "matchId": "25",
+      "degree": 5,
+      "isSpecial": false
+    },
+    {
+      "id": "30",
+      "x": 0.6531,
+      "y": 2.1379,
+      "community": "Rose",
+      "communityHex": "#efcaca",
+      "size": 34.52,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "67",
+      "degree": 8,
+      "isSpecial": false
+    },
+    {
+      "id": "55",
+      "x": -2.744,
+      "y": 1.333,
+      "community": "Ivory",
+      "communityHex": "#efebe4",
+      "size": 38.12,
+      "description": "To us, you're deeply connected to an important part of our lives, and we hope you feel that importance all around you on the day.",
+      "matchId": "56",
+      "degree": 6,
+      "isSpecial": false
+    },
+    {
+      "id": "6",
+      "x": 4.4562,
+      "y": 2.112,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 41.42,
+      "description": "To us, you're someone who brings different friends together, and we hope the day brings those worlds together too.",
+      "matchId": "32",
+      "degree": 21,
+      "isSpecial": false
+    },
+    {
+      "id": "44",
+      "x": 7.1015,
+      "y": -0.1142,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 41.26,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "48",
+      "degree": 9,
+      "isSpecial": false
+    },
+    {
+      "id": "56",
+      "x": 7.8619,
+      "y": 2.461,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 33.83,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "55",
+      "degree": 7,
+      "isSpecial": false
+    },
+    {
+      "id": "13",
+      "x": 5.5764,
+      "y": 2.0794,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 32.69,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "32",
+      "degree": 16,
+      "isSpecial": false
+    },
+    {
+      "id": "26",
+      "x": 6.6389,
+      "y": 2.34,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 39.25,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "32",
+      "degree": 14,
+      "isSpecial": false
+    },
+    {
+      "id": "57",
+      "x": -1.8714,
+      "y": 1.2452,
+      "community": "Ivory",
+      "communityHex": "#efebe4",
+      "size": 25.1,
+      "description": "To us, you're deeply connected to an important part of our lives, and we hope you feel that importance all around you on the day.",
+      "matchId": "56",
+      "degree": 6,
+      "isSpecial": false
+    },
+    {
+      "id": "14",
+      "x": 6.5109,
+      "y": 1.8685,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 39.15,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "32",
+      "degree": 16,
+      "isSpecial": false
+    },
+    {
+      "id": "58",
+      "x": -2.4101,
+      "y": 1.637,
+      "community": "Ivory",
+      "communityHex": "#efebe4",
+      "size": 28.37,
+      "description": "To us, you're deeply connected to an important part of our lives, and we hope you feel that importance all around you on the day.",
+      "matchId": "56",
+      "degree": 6,
+      "isSpecial": false
+    },
+    {
+      "id": "59",
+      "x": -1.4999,
+      "y": -0.9551,
+      "community": "Burgundy",
+      "communityHex": "#902125",
+      "size": 36.85,
+      "description": "To us, you're a gentle bridge between different parts of our world, and we hope the day feels just as welcoming.",
+      "matchId": "49",
+      "degree": 4,
+      "isSpecial": false
+    },
+    {
+      "id": "24",
+      "x": 0.695,
+      "y": 0.2264,
+      "community": "Burgundy",
+      "communityHex": "#902125",
+      "size": 14.78,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "43",
+      "degree": 12,
+      "isSpecial": false
+    },
+    {
+      "id": "23",
+      "x": 0.0896,
+      "y": 1.6724,
+      "community": "Ivory",
+      "communityHex": "#efebe4",
+      "size": 23.97,
+      "description": "To us, you're a gentle bridge between different parts of our world, and we hope the day feels just as welcoming.",
+      "matchId": "25",
+      "degree": 9,
+      "isSpecial": false
+    },
+    {
+      "id": "60",
+      "x": 0.7115,
+      "y": -1.3482,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 29.5,
+      "description": "To us, you're a gentle bridge between different parts of our world, and we hope the day feels just as welcoming.",
+      "matchId": "52",
+      "degree": 3,
+      "isSpecial": false
+    },
+    {
+      "id": "38",
+      "x": 2.3432,
+      "y": -1.0742,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 28.6,
+      "description": "To us, you're a gentle bridge between different parts of our world, and we hope the day feels just as welcoming.",
+      "matchId": "52",
+      "degree": 6,
+      "isSpecial": false
+    },
+    {
+      "id": "61",
+      "x": 7.4123,
+      "y": -0.527,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 43.7,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "48",
+      "degree": 7,
+      "isSpecial": false
+    },
+    {
+      "id": "62",
+      "x": 3.5484,
+      "y": -1.0506,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 25.96,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "48",
+      "degree": 10,
+      "isSpecial": false
+    },
+    {
+      "id": "63",
+      "x": 5.6486,
+      "y": -0.9955,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 34.55,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "48",
+      "degree": 10,
+      "isSpecial": false
+    },
+    {
+      "id": "15",
+      "x": 4.7284,
+      "y": -0.8273,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 25.43,
+      "description": "To us, you're someone who brings different friends together, and we hope the day brings those worlds together too.",
+      "matchId": "48",
+      "degree": 15,
+      "isSpecial": false
+    },
+    {
+      "id": "A1",
+      "x": 3.3516,
+      "y": -0.1497,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 20.39,
+      "description": "To us, you're someone who brings different friends together, and we hope the day brings those worlds together too.",
+      "matchId": "42",
+      "degree": 37,
+      "isSpecial": false
+    },
+    {
+      "id": "4",
+      "x": 4.3539,
+      "y": -0.337,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 24.03,
+      "description": "To us, you're someone who brings different friends together, and we hope the day brings those worlds together too.",
+      "matchId": "48",
+      "degree": 27,
+      "isSpecial": false
+    },
+    {
+      "id": "9",
+      "x": 5.1217,
+      "y": -0.4849,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 26.85,
+      "description": "To us, you're someone who brings different friends together, and we hope the day brings those worlds together too.",
+      "matchId": "60",
+      "degree": 19,
+      "isSpecial": false
+    },
+    {
+      "id": "35",
+      "x": 6.7612,
+      "y": 0.5012,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 22.54,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "48",
+      "degree": 9,
+      "isSpecial": false
+    },
+    {
+      "id": "64",
+      "x": -0.1349,
+      "y": 3.1402,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 18.88,
+      "description": "To us, you're deeply connected to an important part of our lives, and we hope you feel that importance all around you on the day.",
+      "matchId": "25",
+      "degree": 2,
+      "isSpecial": false
+    },
+    {
+      "id": "20",
+      "x": 1.7163,
+      "y": 2.4118,
+      "community": "Rose",
+      "communityHex": "#efcaca",
+      "size": 15.7,
+      "description": "To us, you're someone whose friendships span different circles, and we hope you feel comfortable wherever you find yourself on the day.",
+      "matchId": "25",
+      "degree": 9,
+      "isSpecial": false
+    },
+    {
+      "id": "28",
+      "x": 1.8214,
+      "y": 2.039,
+      "community": "Rose",
+      "communityHex": "#efcaca",
+      "size": 24.05,
+      "description": "To us, you're someone whose friendships span different circles, and we hope you feel comfortable wherever you find yourself on the day.",
+      "matchId": "67",
+      "degree": 9,
+      "isSpecial": false
+    },
+    {
+      "id": "1A",
+      "x": 3.6379,
+      "y": 1.8831,
+      "community": "Rose",
+      "communityHex": "#efcaca",
+      "size": 41.1,
+      "description": "To us, you're someone who brings different friends together, and we hope the day brings those worlds together too.",
+      "matchId": "55",
+      "degree": 20,
+      "isSpecial": false
+    },
+    {
+      "id": "18",
+      "x": 1.0507,
+      "y": 2.3852,
+      "community": "Rose",
+      "communityHex": "#efcaca",
+      "size": 30.2,
+      "description": "To us, you're someone whose friendships span different circles, and we hope you feel comfortable wherever you find yourself on the day.",
+      "matchId": "55",
+      "degree": 10,
+      "isSpecial": false
+    },
+    {
+      "id": "65",
+      "x": 7.6165,
+      "y": -0.7697,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 31.53,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "48",
+      "degree": 7,
+      "isSpecial": false
+    },
+    {
+      "id": "11",
+      "x": 0.2373,
+      "y": -0.2233,
+      "community": "Burgundy",
+      "communityHex": "#902125",
+      "size": 26.45,
+      "description": "To us, you're someone who brings different friends together, and we hope the day brings those worlds together too.",
+      "matchId": "43",
+      "degree": 16,
+      "isSpecial": false
+    },
+    {
+      "id": "17",
+      "x": 0.5858,
+      "y": -0.0173,
+      "community": "Burgundy",
+      "communityHex": "#902125",
+      "size": 46,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "49",
+      "degree": 14,
+      "isSpecial": false
+    },
+    {
+      "id": "40",
+      "x": -1.6587,
+      "y": -0.0788,
+      "community": "Burgundy",
+      "communityHex": "#902125",
+      "size": 22.98,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "43",
+      "degree": 12,
+      "isSpecial": false
+    },
+    {
+      "id": "33",
+      "x": 6.7863,
+      "y": 1.631,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 32.71,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "25",
+      "degree": 11,
+      "isSpecial": false
+    },
+    {
+      "id": "66",
+      "x": 6.797,
+      "y": -0.8129,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 40.51,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "48",
+      "degree": 7,
+      "isSpecial": false
+    },
+    {
+      "id": "39",
+      "x": 6.0971,
+      "y": 2.5435,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 31.91,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "25",
+      "degree": 12,
+      "isSpecial": false
+    },
+    {
+      "id": "8",
+      "x": 1.4944,
+      "y": -0.0663,
+      "community": "Burgundy",
+      "communityHex": "#902125",
+      "size": 22.18,
+      "description": "To us, you're someone who brings different friends together, and we hope the day brings those worlds together too.",
+      "matchId": "48",
+      "degree": 20,
+      "isSpecial": false
+    },
+    {
+      "id": "41",
+      "x": -1.1231,
+      "y": -0.2899,
+      "community": "Burgundy",
+      "communityHex": "#902125",
+      "size": 29.17,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "43",
+      "degree": 12,
+      "isSpecial": false
+    },
+    {
+      "id": "47",
+      "x": 6.3571,
+      "y": 1.4185,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 48.92,
+      "description": "To us, you're right at the heart of many of our friendships, and we hope you feel just how important you are to us.",
+      "matchId": "25",
+      "degree": 10,
+      "isSpecial": false
+    },
+    {
+      "id": "10",
+      "x": 5.0011,
+      "y": 1.4109,
+      "community": "Forest Green",
+      "communityHex": "#80956d",
+      "size": 21.25,
+      "description": "To us, you're someone who naturally connects people who might not otherwise meet, and we hope the day feels full of those moments.",
+      "matchId": "25",
+      "degree": 16,
+      "isSpecial": false
+    },
+    {
+      "id": "36",
+      "x": 7.2781,
+      "y": 0.3378,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 22.26,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "52",
+      "degree": 9,
+      "isSpecial": false
+    },
+    {
+      "id": "31",
+      "x": 5.9038,
+      "y": 0.1563,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 22.77,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "48",
+      "degree": 10,
+      "isSpecial": false
+    },
+    {
+      "id": "45",
+      "x": 7.9214,
+      "y": -0.0579,
+      "community": "Plum",
+      "communityHex": "#5b3a4b",
+      "size": 47.88,
+      "description": "To us, you're part of our wonderfully close-knit group of friends, and we hope you get to enjoy that closeness on the day.",
+      "matchId": "52",
+      "degree": 9,
+      "isSpecial": false
+    },
+    {
+      "id": "67",
+      "x": 1.606,
+      "y": 3.0801,
+      "community": "Rose",
+      "communityHex": "#efcaca",
+      "size": 35.91,
+      "description": "To us, you're a gentle bridge between different parts of our world, and we hope the day feels just as welcoming.",
+      "matchId": "46",
+      "degree": 5,
+      "isSpecial": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "BRIDE",
+      "target": "GROOM"
+    },
+    {
+      "source": "BRIDE",
+      "target": "48"
+    },
+    {
+      "source": "BRIDE",
+      "target": "25"
+    },
+    {
+      "source": "BRIDE",
+      "target": "49"
+    },
+    {
+      "source": "BRIDE",
+      "target": "50"
+    },
+    {
+      "source": "BRIDE",
+      "target": "16"
+    },
+    {
+      "source": "BRIDE",
+      "target": "7"
+    },
+    {
+      "source": "BRIDE",
+      "target": "21"
+    },
+    {
+      "source": "BRIDE",
+      "target": "43"
+    },
+    {
+      "source": "BRIDE",
+      "target": "32"
+    },
+    {
+      "source": "BRIDE",
+      "target": "27"
+    },
+    {
+      "source": "BRIDE",
+      "target": "37"
+    },
+    {
+      "source": "BRIDE",
+      "target": "34"
+    },
+    {
+      "source": "BRIDE",
+      "target": "22"
+    },
+    {
+      "source": "BRIDE",
+      "target": "42"
+    },
+    {
+      "source": "BRIDE",
+      "target": "51"
+    },
+    {
+      "source": "BRIDE",
+      "target": "52"
+    },
+    {
+      "source": "BRIDE",
+      "target": "53"
+    },
+    {
+      "source": "BRIDE",
+      "target": "19"
+    },
+    {
+      "source": "BRIDE",
+      "target": "12"
+    },
+    {
+      "source": "BRIDE",
+      "target": "54"
+    },
+    {
+      "source": "BRIDE",
+      "target": "30"
+    },
+    {
+      "source": "BRIDE",
+      "target": "55"
+    },
+    {
+      "source": "BRIDE",
+      "target": "6"
+    },
+    {
+      "source": "BRIDE",
+      "target": "44"
+    },
+    {
+      "source": "BRIDE",
+      "target": "13"
+    },
+    {
+      "source": "BRIDE",
+      "target": "57"
+    },
+    {
+      "source": "BRIDE",
+      "target": "14"
+    },
+    {
+      "source": "BRIDE",
+      "target": "58"
+    },
+    {
+      "source": "BRIDE",
+      "target": "59"
+    },
+    {
+      "source": "BRIDE",
+      "target": "24"
+    },
+    {
+      "source": "BRIDE",
+      "target": "23"
+    },
+    {
+      "source": "BRIDE",
+      "target": "60"
+    },
+    {
+      "source": "BRIDE",
+      "target": "38"
+    },
+    {
+      "source": "BRIDE",
+      "target": "61"
+    },
+    {
+      "source": "BRIDE",
+      "target": "62"
+    },
+    {
+      "source": "BRIDE",
+      "target": "63"
+    },
+    {
+      "source": "BRIDE",
+      "target": "15"
+    },
+    {
+      "source": "BRIDE",
+      "target": "A1"
+    },
+    {
+      "source": "BRIDE",
+      "target": "4"
+    },
+    {
+      "source": "BRIDE",
+      "target": "9"
+    },
+    {
+      "source": "BRIDE",
+      "target": "35"
+    },
+    {
+      "source": "BRIDE",
+      "target": "20"
+    },
+    {
+      "source": "BRIDE",
+      "target": "28"
+    },
+    {
+      "source": "BRIDE",
+      "target": "1A"
+    },
+    {
+      "source": "BRIDE",
+      "target": "18"
+    },
+    {
+      "source": "BRIDE",
+      "target": "65"
+    },
+    {
+      "source": "BRIDE",
+      "target": "11"
+    },
+    {
+      "source": "BRIDE",
+      "target": "17"
+    },
+    {
+      "source": "BRIDE",
+      "target": "40"
+    },
+    {
+      "source": "BRIDE",
+      "target": "33"
+    },
+    {
+      "source": "BRIDE",
+      "target": "66"
+    },
+    {
+      "source": "BRIDE",
+      "target": "8"
+    },
+    {
+      "source": "BRIDE",
+      "target": "41"
+    },
+    {
+      "source": "BRIDE",
+      "target": "47"
+    },
+    {
+      "source": "BRIDE",
+      "target": "10"
+    },
+    {
+      "source": "BRIDE",
+      "target": "36"
+    },
+    {
+      "source": "BRIDE",
+      "target": "31"
+    },
+    {
+      "source": "BRIDE",
+      "target": "45"
+    },
+    {
+      "source": "GROOM",
+      "target": "48"
+    },
+    {
+      "source": "GROOM",
+      "target": "25"
+    },
+    {
+      "source": "GROOM",
+      "target": "16"
+    },
+    {
+      "source": "GROOM",
+      "target": "7"
+    },
+    {
+      "source": "GROOM",
+      "target": "21"
+    },
+    {
+      "source": "GROOM",
+      "target": "43"
+    },
+    {
+      "source": "GROOM",
+      "target": "32"
+    },
+    {
+      "source": "GROOM",
+      "target": "37"
+    },
+    {
+      "source": "GROOM",
+      "target": "29"
+    },
+    {
+      "source": "GROOM",
+      "target": "34"
+    },
+    {
+      "source": "GROOM",
+      "target": "22"
+    },
+    {
+      "source": "GROOM",
+      "target": "19"
+    },
+    {
+      "source": "GROOM",
+      "target": "46"
+    },
+    {
+      "source": "GROOM",
+      "target": "12"
+    },
+    {
+      "source": "GROOM",
+      "target": "54"
+    },
+    {
+      "source": "GROOM",
+      "target": "30"
+    },
+    {
+      "source": "GROOM",
+      "target": "55"
+    },
+    {
+      "source": "GROOM",
+      "target": "6"
+    },
+    {
+      "source": "GROOM",
+      "target": "56"
+    },
+    {
+      "source": "GROOM",
+      "target": "13"
+    },
+    {
+      "source": "GROOM",
+      "target": "26"
+    },
+    {
+      "source": "GROOM",
+      "target": "57"
+    },
+    {
+      "source": "GROOM",
+      "target": "14"
+    },
+    {
+      "source": "GROOM",
+      "target": "58"
+    },
+    {
+      "source": "GROOM",
+      "target": "24"
+    },
+    {
+      "source": "GROOM",
+      "target": "23"
+    },
+    {
+      "source": "GROOM",
+      "target": "A1"
+    },
+    {
+      "source": "GROOM",
+      "target": "4"
+    },
+    {
+      "source": "GROOM",
+      "target": "9"
+    },
+    {
+      "source": "GROOM",
+      "target": "35"
+    },
+    {
+      "source": "GROOM",
+      "target": "64"
+    },
+    {
+      "source": "GROOM",
+      "target": "20"
+    },
+    {
+      "source": "GROOM",
+      "target": "28"
+    },
+    {
+      "source": "GROOM",
+      "target": "1A"
+    },
+    {
+      "source": "GROOM",
+      "target": "18"
+    },
+    {
+      "source": "GROOM",
+      "target": "11"
+    },
+    {
+      "source": "GROOM",
+      "target": "17"
+    },
+    {
+      "source": "GROOM",
+      "target": "33"
+    },
+    {
+      "source": "GROOM",
+      "target": "39"
+    },
+    {
+      "source": "GROOM",
+      "target": "8"
+    },
+    {
+      "source": "GROOM",
+      "target": "47"
+    },
+    {
+      "source": "GROOM",
+      "target": "10"
+    },
+    {
+      "source": "GROOM",
+      "target": "36"
+    },
+    {
+      "source": "GROOM",
+      "target": "31"
+    },
+    {
+      "source": "GROOM",
+      "target": "67"
+    },
+    {
+      "source": "48",
+      "target": "A1"
+    },
+    {
+      "source": "25",
+      "target": "16"
+    },
+    {
+      "source": "25",
+      "target": "29"
+    },
+    {
+      "source": "25",
+      "target": "6"
+    },
+    {
+      "source": "25",
+      "target": "13"
+    },
+    {
+      "source": "25",
+      "target": "26"
+    },
+    {
+      "source": "25",
+      "target": "14"
+    },
+    {
+      "source": "49",
+      "target": "21"
+    },
+    {
+      "source": "49",
+      "target": "22"
+    },
+    {
+      "source": "49",
+      "target": "24"
+    },
+    {
+      "source": "49",
+      "target": "A1"
+    },
+    {
+      "source": "49",
+      "target": "11"
+    },
+    {
+      "source": "49",
+      "target": "40"
+    },
+    {
+      "source": "49",
+      "target": "8"
+    },
+    {
+      "source": "49",
+      "target": "41"
+    },
+    {
+      "source": "50",
+      "target": "51"
+    },
+    {
+      "source": "50",
+      "target": "52"
+    },
+    {
+      "source": "50",
+      "target": "53"
+    },
+    {
+      "source": "50",
+      "target": "62"
+    },
+    {
+      "source": "50",
+      "target": "63"
+    },
+    {
+      "source": "50",
+      "target": "15"
+    },
+    {
+      "source": "50",
+      "target": "A1"
+    },
+    {
+      "source": "50",
+      "target": "4"
+    },
+    {
+      "source": "50",
+      "target": "9"
+    },
+    {
+      "source": "16",
+      "target": "7"
+    },
+    {
+      "source": "16",
+      "target": "29"
+    },
+    {
+      "source": "16",
+      "target": "19"
+    },
+    {
+      "source": "16",
+      "target": "6"
+    },
+    {
+      "source": "16",
+      "target": "13"
+    },
+    {
+      "source": "16",
+      "target": "26"
+    },
+    {
+      "source": "16",
+      "target": "14"
+    },
+    {
+      "source": "16",
+      "target": "1A"
+    },
+    {
+      "source": "16",
+      "target": "33"
+    },
+    {
+      "source": "16",
+      "target": "39"
+    },
+    {
+      "source": "16",
+      "target": "47"
+    },
+    {
+      "source": "16",
+      "target": "10"
+    },
+    {
+      "source": "7",
+      "target": "32"
+    },
+    {
+      "source": "7",
+      "target": "29"
+    },
+    {
+      "source": "7",
+      "target": "19"
+    },
+    {
+      "source": "7",
+      "target": "12"
+    },
+    {
+      "source": "7",
+      "target": "54"
+    },
+    {
+      "source": "7",
+      "target": "6"
+    },
+    {
+      "source": "7",
+      "target": "13"
+    },
+    {
+      "source": "7",
+      "target": "26"
+    },
+    {
+      "source": "7",
+      "target": "14"
+    },
+    {
+      "source": "7",
+      "target": "23"
+    },
+    {
+      "source": "7",
+      "target": "64"
+    },
+    {
+      "source": "7",
+      "target": "1A"
+    },
+    {
+      "source": "7",
+      "target": "33"
+    },
+    {
+      "source": "7",
+      "target": "39"
+    },
+    {
+      "source": "7",
+      "target": "10"
+    },
+    {
+      "source": "21",
+      "target": "37"
+    },
+    {
+      "source": "21",
+      "target": "22"
+    },
+    {
+      "source": "21",
+      "target": "42"
+    },
+    {
+      "source": "21",
+      "target": "24"
+    },
+    {
+      "source": "21",
+      "target": "A1"
+    },
+    {
+      "source": "21",
+      "target": "11"
+    },
+    {
+      "source": "21",
+      "target": "17"
+    },
+    {
+      "source": "21",
+      "target": "40"
+    },
+    {
+      "source": "21",
+      "target": "8"
+    },
+    {
+      "source": "21",
+      "target": "41"
+    },
+    {
+      "source": "43",
+      "target": "27"
+    },
+    {
+      "source": "43",
+      "target": "A1"
+    },
+    {
+      "source": "43",
+      "target": "4"
+    },
+    {
+      "source": "43",
+      "target": "17"
+    },
+    {
+      "source": "43",
+      "target": "8"
+    },
+    {
+      "source": "32",
+      "target": "54"
+    },
+    {
+      "source": "32",
+      "target": "55"
+    },
+    {
+      "source": "32",
+      "target": "57"
+    },
+    {
+      "source": "32",
+      "target": "58"
+    },
+    {
+      "source": "32",
+      "target": "23"
+    },
+    {
+      "source": "27",
+      "target": "42"
+    },
+    {
+      "source": "27",
+      "target": "59"
+    },
+    {
+      "source": "27",
+      "target": "A1"
+    },
+    {
+      "source": "27",
+      "target": "4"
+    },
+    {
+      "source": "27",
+      "target": "11"
+    },
+    {
+      "source": "27",
+      "target": "17"
+    },
+    {
+      "source": "27",
+      "target": "8"
+    },
+    {
+      "source": "37",
+      "target": "22"
+    },
+    {
+      "source": "37",
+      "target": "24"
+    },
+    {
+      "source": "37",
+      "target": "A1"
+    },
+    {
+      "source": "37",
+      "target": "11"
+    },
+    {
+      "source": "37",
+      "target": "17"
+    },
+    {
+      "source": "37",
+      "target": "40"
+    },
+    {
+      "source": "37",
+      "target": "8"
+    },
+    {
+      "source": "37",
+      "target": "41"
+    },
+    {
+      "source": "29",
+      "target": "19"
+    },
+    {
+      "source": "29",
+      "target": "12"
+    },
+    {
+      "source": "29",
+      "target": "6"
+    },
+    {
+      "source": "29",
+      "target": "13"
+    },
+    {
+      "source": "29",
+      "target": "26"
+    },
+    {
+      "source": "29",
+      "target": "14"
+    },
+    {
+      "source": "29",
+      "target": "1A"
+    },
+    {
+      "source": "29",
+      "target": "39"
+    },
+    {
+      "source": "34",
+      "target": "44"
+    },
+    {
+      "source": "34",
+      "target": "A1"
+    },
+    {
+      "source": "34",
+      "target": "4"
+    },
+    {
+      "source": "34",
+      "target": "35"
+    },
+    {
+      "source": "34",
+      "target": "36"
+    },
+    {
+      "source": "34",
+      "target": "31"
+    },
+    {
+      "source": "34",
+      "target": "45"
+    },
+    {
+      "source": "22",
+      "target": "42"
+    },
+    {
+      "source": "22",
+      "target": "24"
+    },
+    {
+      "source": "22",
+      "target": "A1"
+    },
+    {
+      "source": "22",
+      "target": "11"
+    },
+    {
+      "source": "22",
+      "target": "17"
+    },
+    {
+      "source": "22",
+      "target": "40"
+    },
+    {
+      "source": "22",
+      "target": "8"
+    },
+    {
+      "source": "22",
+      "target": "41"
+    },
+    {
+      "source": "42",
+      "target": "11"
+    },
+    {
+      "source": "42",
+      "target": "17"
+    },
+    {
+      "source": "42",
+      "target": "40"
+    },
+    {
+      "source": "42",
+      "target": "8"
+    },
+    {
+      "source": "42",
+      "target": "41"
+    },
+    {
+      "source": "51",
+      "target": "52"
+    },
+    {
+      "source": "51",
+      "target": "53"
+    },
+    {
+      "source": "51",
+      "target": "62"
+    },
+    {
+      "source": "51",
+      "target": "63"
+    },
+    {
+      "source": "51",
+      "target": "15"
+    },
+    {
+      "source": "51",
+      "target": "A1"
+    },
+    {
+      "source": "51",
+      "target": "4"
+    },
+    {
+      "source": "51",
+      "target": "9"
+    },
+    {
+      "source": "52",
+      "target": "53"
+    },
+    {
+      "source": "52",
+      "target": "62"
+    },
+    {
+      "source": "52",
+      "target": "63"
+    },
+    {
+      "source": "52",
+      "target": "15"
+    },
+    {
+      "source": "52",
+      "target": "A1"
+    },
+    {
+      "source": "52",
+      "target": "4"
+    },
+    {
+      "source": "52",
+      "target": "9"
+    },
+    {
+      "source": "53",
+      "target": "62"
+    },
+    {
+      "source": "53",
+      "target": "63"
+    },
+    {
+      "source": "53",
+      "target": "15"
+    },
+    {
+      "source": "53",
+      "target": "A1"
+    },
+    {
+      "source": "53",
+      "target": "4"
+    },
+    {
+      "source": "53",
+      "target": "9"
+    },
+    {
+      "source": "19",
+      "target": "6"
+    },
+    {
+      "source": "19",
+      "target": "13"
+    },
+    {
+      "source": "19",
+      "target": "26"
+    },
+    {
+      "source": "19",
+      "target": "14"
+    },
+    {
+      "source": "19",
+      "target": "33"
+    },
+    {
+      "source": "19",
+      "target": "39"
+    },
+    {
+      "source": "19",
+      "target": "47"
+    },
+    {
+      "source": "19",
+      "target": "10"
+    },
+    {
+      "source": "46",
+      "target": "12"
+    },
+    {
+      "source": "46",
+      "target": "30"
+    },
+    {
+      "source": "46",
+      "target": "6"
+    },
+    {
+      "source": "46",
+      "target": "20"
+    },
+    {
+      "source": "46",
+      "target": "28"
+    },
+    {
+      "source": "46",
+      "target": "1A"
+    },
+    {
+      "source": "46",
+      "target": "18"
+    },
+    {
+      "source": "12",
+      "target": "30"
+    },
+    {
+      "source": "12",
+      "target": "6"
+    },
+    {
+      "source": "12",
+      "target": "20"
+    },
+    {
+      "source": "12",
+      "target": "28"
+    },
+    {
+      "source": "12",
+      "target": "1A"
+    },
+    {
+      "source": "12",
+      "target": "18"
+    },
+    {
+      "source": "12",
+      "target": "67"
+    },
+    {
+      "source": "54",
+      "target": "23"
+    },
+    {
+      "source": "30",
+      "target": "20"
+    },
+    {
+      "source": "30",
+      "target": "28"
+    },
+    {
+      "source": "30",
+      "target": "1A"
+    },
+    {
+      "source": "30",
+      "target": "18"
+    },
+    {
+      "source": "55",
+      "target": "57"
+    },
+    {
+      "source": "55",
+      "target": "58"
+    },
+    {
+      "source": "55",
+      "target": "23"
+    },
+    {
+      "source": "6",
+      "target": "56"
+    },
+    {
+      "source": "6",
+      "target": "13"
+    },
+    {
+      "source": "6",
+      "target": "26"
+    },
+    {
+      "source": "6",
+      "target": "14"
+    },
+    {
+      "source": "6",
+      "target": "23"
+    },
+    {
+      "source": "6",
+      "target": "28"
+    },
+    {
+      "source": "6",
+      "target": "1A"
+    },
+    {
+      "source": "6",
+      "target": "18"
+    },
+    {
+      "source": "6",
+      "target": "33"
+    },
+    {
+      "source": "6",
+      "target": "39"
+    },
+    {
+      "source": "6",
+      "target": "47"
+    },
+    {
+      "source": "6",
+      "target": "10"
+    },
+    {
+      "source": "44",
+      "target": "A1"
+    },
+    {
+      "source": "44",
+      "target": "4"
+    },
+    {
+      "source": "44",
+      "target": "9"
+    },
+    {
+      "source": "44",
+      "target": "35"
+    },
+    {
+      "source": "44",
+      "target": "36"
+    },
+    {
+      "source": "44",
+      "target": "31"
+    },
+    {
+      "source": "44",
+      "target": "45"
+    },
+    {
+      "source": "56",
+      "target": "13"
+    },
+    {
+      "source": "56",
+      "target": "26"
+    },
+    {
+      "source": "56",
+      "target": "14"
+    },
+    {
+      "source": "56",
+      "target": "39"
+    },
+    {
+      "source": "56",
+      "target": "10"
+    },
+    {
+      "source": "13",
+      "target": "26"
+    },
+    {
+      "source": "13",
+      "target": "14"
+    },
+    {
+      "source": "13",
+      "target": "1A"
+    },
+    {
+      "source": "13",
+      "target": "33"
+    },
+    {
+      "source": "13",
+      "target": "39"
+    },
+    {
+      "source": "13",
+      "target": "47"
+    },
+    {
+      "source": "13",
+      "target": "10"
+    },
+    {
+      "source": "26",
+      "target": "14"
+    },
+    {
+      "source": "26",
+      "target": "1A"
+    },
+    {
+      "source": "26",
+      "target": "33"
+    },
+    {
+      "source": "26",
+      "target": "39"
+    },
+    {
+      "source": "26",
+      "target": "10"
+    },
+    {
+      "source": "57",
+      "target": "58"
+    },
+    {
+      "source": "57",
+      "target": "23"
+    },
+    {
+      "source": "14",
+      "target": "1A"
+    },
+    {
+      "source": "14",
+      "target": "33"
+    },
+    {
+      "source": "14",
+      "target": "39"
+    },
+    {
+      "source": "14",
+      "target": "47"
+    },
+    {
+      "source": "14",
+      "target": "10"
+    },
+    {
+      "source": "58",
+      "target": "23"
+    },
+    {
+      "source": "59",
+      "target": "11"
+    },
+    {
+      "source": "59",
+      "target": "8"
+    },
+    {
+      "source": "24",
+      "target": "A1"
+    },
+    {
+      "source": "24",
+      "target": "4"
+    },
+    {
+      "source": "24",
+      "target": "11"
+    },
+    {
+      "source": "24",
+      "target": "40"
+    },
+    {
+      "source": "24",
+      "target": "8"
+    },
+    {
+      "source": "24",
+      "target": "41"
+    },
+    {
+      "source": "60",
+      "target": "38"
+    },
+    {
+      "source": "60",
+      "target": "A1"
+    },
+    {
+      "source": "38",
+      "target": "15"
+    },
+    {
+      "source": "38",
+      "target": "A1"
+    },
+    {
+      "source": "38",
+      "target": "4"
+    },
+    {
+      "source": "38",
+      "target": "9"
+    },
+    {
+      "source": "61",
+      "target": "15"
+    },
+    {
+      "source": "61",
+      "target": "A1"
+    },
+    {
+      "source": "61",
+      "target": "4"
+    },
+    {
+      "source": "61",
+      "target": "9"
+    },
+    {
+      "source": "61",
+      "target": "65"
+    },
+    {
+      "source": "61",
+      "target": "66"
+    },
+    {
+      "source": "62",
+      "target": "63"
+    },
+    {
+      "source": "62",
+      "target": "15"
+    },
+    {
+      "source": "62",
+      "target": "A1"
+    },
+    {
+      "source": "62",
+      "target": "4"
+    },
+    {
+      "source": "62",
+      "target": "9"
+    },
+    {
+      "source": "63",
+      "target": "15"
+    },
+    {
+      "source": "63",
+      "target": "A1"
+    },
+    {
+      "source": "63",
+      "target": "4"
+    },
+    {
+      "source": "63",
+      "target": "9"
+    },
+    {
+      "source": "15",
+      "target": "A1"
+    },
+    {
+      "source": "15",
+      "target": "4"
+    },
+    {
+      "source": "15",
+      "target": "9"
+    },
+    {
+      "source": "15",
+      "target": "65"
+    },
+    {
+      "source": "15",
+      "target": "66"
+    },
+    {
+      "source": "15",
+      "target": "8"
+    },
+    {
+      "source": "A1",
+      "target": "4"
+    },
+    {
+      "source": "A1",
+      "target": "9"
+    },
+    {
+      "source": "A1",
+      "target": "35"
+    },
+    {
+      "source": "A1",
+      "target": "1A"
+    },
+    {
+      "source": "A1",
+      "target": "65"
+    },
+    {
+      "source": "A1",
+      "target": "11"
+    },
+    {
+      "source": "A1",
+      "target": "17"
+    },
+    {
+      "source": "A1",
+      "target": "40"
+    },
+    {
+      "source": "A1",
+      "target": "66"
+    },
+    {
+      "source": "A1",
+      "target": "8"
+    },
+    {
+      "source": "A1",
+      "target": "41"
+    },
+    {
+      "source": "A1",
+      "target": "10"
+    },
+    {
+      "source": "A1",
+      "target": "36"
+    },
+    {
+      "source": "A1",
+      "target": "31"
+    },
+    {
+      "source": "A1",
+      "target": "45"
+    },
+    {
+      "source": "4",
+      "target": "9"
+    },
+    {
+      "source": "4",
+      "target": "35"
+    },
+    {
+      "source": "4",
+      "target": "65"
+    },
+    {
+      "source": "4",
+      "target": "11"
+    },
+    {
+      "source": "4",
+      "target": "17"
+    },
+    {
+      "source": "4",
+      "target": "66"
+    },
+    {
+      "source": "4",
+      "target": "8"
+    },
+    {
+      "source": "4",
+      "target": "36"
+    },
+    {
+      "source": "4",
+      "target": "31"
+    },
+    {
+      "source": "4",
+      "target": "45"
+    },
+    {
+      "source": "9",
+      "target": "65"
+    },
+    {
+      "source": "9",
+      "target": "66"
+    },
+    {
+      "source": "9",
+      "target": "8"
+    },
+    {
+      "source": "9",
+      "target": "31"
+    },
+    {
+      "source": "9",
+      "target": "45"
+    },
+    {
+      "source": "35",
+      "target": "36"
+    },
+    {
+      "source": "35",
+      "target": "31"
+    },
+    {
+      "source": "35",
+      "target": "45"
+    },
+    {
+      "source": "20",
+      "target": "28"
+    },
+    {
+      "source": "20",
+      "target": "1A"
+    },
+    {
+      "source": "20",
+      "target": "18"
+    },
+    {
+      "source": "20",
+      "target": "67"
+    },
+    {
+      "source": "28",
+      "target": "1A"
+    },
+    {
+      "source": "28",
+      "target": "18"
+    },
+    {
+      "source": "1A",
+      "target": "18"
+    },
+    {
+      "source": "1A",
+      "target": "39"
+    },
+    {
+      "source": "1A",
+      "target": "47"
+    },
+    {
+      "source": "1A",
+      "target": "10"
+    },
+    {
+      "source": "1A",
+      "target": "67"
+    },
+    {
+      "source": "18",
+      "target": "67"
+    },
+    {
+      "source": "65",
+      "target": "66"
+    },
+    {
+      "source": "11",
+      "target": "17"
+    },
+    {
+      "source": "11",
+      "target": "40"
+    },
+    {
+      "source": "11",
+      "target": "8"
+    },
+    {
+      "source": "11",
+      "target": "41"
+    },
+    {
+      "source": "17",
+      "target": "40"
+    },
+    {
+      "source": "17",
+      "target": "8"
+    },
+    {
+      "source": "17",
+      "target": "41"
+    },
+    {
+      "source": "40",
+      "target": "8"
+    },
+    {
+      "source": "40",
+      "target": "41"
+    },
+    {
+      "source": "33",
+      "target": "47"
+    },
+    {
+      "source": "33",
+      "target": "10"
+    },
+    {
+      "source": "39",
+      "target": "10"
+    },
+    {
+      "source": "8",
+      "target": "41"
+    },
+    {
+      "source": "8",
+      "target": "10"
+    },
+    {
+      "source": "47",
+      "target": "10"
+    },
+    {
+      "source": "36",
+      "target": "31"
+    },
+    {
+      "source": "36",
+      "target": "45"
+    },
+    {
+      "source": "31",
+      "target": "45"
+    }
+  ],
+  "backboneEdges": [
+    {
+      "source": "BRIDE",
+      "target": "48"
+    },
+    {
+      "source": "50",
+      "target": "53"
+    },
+    {
+      "source": "51",
+      "target": "53"
+    },
+    {
+      "source": "60",
+      "target": "38"
+    },
+    {
+      "source": "51",
+      "target": "62"
+    },
+    {
+      "source": "52",
+      "target": "63"
+    },
+    {
+      "source": "53",
+      "target": "15"
+    },
+    {
+      "source": "BRIDE",
+      "target": "A1"
+    },
+    {
+      "source": "38",
+      "target": "A1"
+    },
+    {
+      "source": "62",
+      "target": "A1"
+    },
+    {
+      "source": "15",
+      "target": "4"
+    },
+    {
+      "source": "63",
+      "target": "9"
+    },
+    {
+      "source": "15",
+      "target": "9"
+    },
+    {
+      "source": "34",
+      "target": "35"
+    },
+    {
+      "source": "61",
+      "target": "65"
+    },
+    {
+      "source": "61",
+      "target": "66"
+    },
+    {
+      "source": "9",
+      "target": "66"
+    },
+    {
+      "source": "44",
+      "target": "36"
+    },
+    {
+      "source": "35",
+      "target": "36"
+    },
+    {
+      "source": "34",
+      "target": "31"
+    },
+    {
+      "source": "9",
+      "target": "31"
+    },
+    {
+      "source": "36",
+      "target": "45"
+    },
+    {
+      "source": "GROOM",
+      "target": "7"
+    },
+    {
+      "source": "7",
+      "target": "6"
+    },
+    {
+      "source": "16",
+      "target": "13"
+    },
+    {
+      "source": "29",
+      "target": "13"
+    },
+    {
+      "source": "19",
+      "target": "13"
+    },
+    {
+      "source": "25",
+      "target": "26"
+    },
+    {
+      "source": "56",
+      "target": "26"
+    },
+    {
+      "source": "19",
+      "target": "14"
+    },
+    {
+      "source": "26",
+      "target": "14"
+    },
+    {
+      "source": "GROOM",
+      "target": "64"
+    },
+    {
+      "source": "14",
+      "target": "33"
+    },
+    {
+      "source": "19",
+      "target": "39"
+    },
+    {
+      "source": "14",
+      "target": "47"
+    },
+    {
+      "source": "16",
+      "target": "10"
+    },
+    {
+      "source": "6",
+      "target": "10"
+    },
+    {
+      "source": "21",
+      "target": "37"
+    },
+    {
+      "source": "21",
+      "target": "22"
+    },
+    {
+      "source": "21",
+      "target": "11"
+    },
+    {
+      "source": "59",
+      "target": "11"
+    },
+    {
+      "source": "24",
+      "target": "11"
+    },
+    {
+      "source": "27",
+      "target": "17"
+    },
+    {
+      "source": "11",
+      "target": "17"
+    },
+    {
+      "source": "22",
+      "target": "40"
+    },
+    {
+      "source": "42",
+      "target": "40"
+    },
+    {
+      "source": "43",
+      "target": "8"
+    },
+    {
+      "source": "24",
+      "target": "8"
+    },
+    {
+      "source": "49",
+      "target": "41"
+    },
+    {
+      "source": "22",
+      "target": "41"
+    },
+    {
+      "source": "32",
+      "target": "54"
+    },
+    {
+      "source": "32",
+      "target": "57"
+    },
+    {
+      "source": "55",
+      "target": "58"
+    },
+    {
+      "source": "57",
+      "target": "58"
+    },
+    {
+      "source": "54",
+      "target": "23"
+    },
+    {
+      "source": "46",
+      "target": "12"
+    },
+    {
+      "source": "46",
+      "target": "20"
+    },
+    {
+      "source": "20",
+      "target": "28"
+    },
+    {
+      "source": "12",
+      "target": "1A"
+    },
+    {
+      "source": "30",
+      "target": "18"
+    },
+    {
+      "source": "20",
+      "target": "18"
+    },
+    {
+      "source": "20",
+      "target": "67"
+    }
+  ],
+  "communities": [
+    {
+      "name": "Rose",
+      "hex": "#efcaca"
+    },
+    {
+      "name": "Ivory",
+      "hex": "#efebe4"
+    },
+    {
+      "name": "Burgundy",
+      "hex": "#902125"
+    },
+    {
+      "name": "Forest Green",
+      "hex": "#80956d"
+    },
+    {
+      "name": "Plum",
+      "hex": "#5b3a4b"
+    }
+  ],
+  "meta": {
+    "nodeCount": 67,
+    "edgeCount": 412,
+    "communityCount": 5,
+    "seed": 81426,
+    "rotation": -98,
+    "stretchX": 2.2,
+    "stretchY": 0.6
+  }
+}
