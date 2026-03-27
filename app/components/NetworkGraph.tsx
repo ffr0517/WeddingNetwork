@@ -297,12 +297,20 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
       const coords = nodeCoords.current.get(nodeId);
       if (!coords) return;
 
-      const tx = SVG_W / 2 - coords.cx * FOCUSED_SCALE;
-      const ty = SVG_H / 2 - coords.cy * FOCUSED_SCALE;
+      // On mobile the graph is constrained to 45dvh (a fixed-height container),
+      // so SVG_H/2 centres the node correctly within that area.
+      // Use a gentler zoom scale so the node doesn't fill the whole small area.
+      const containerW = svgRef.current!.getBoundingClientRect().width || SVG_W;
+      const isMobile = containerW < 640;
+      const focusScale = isMobile ? 2.8 : FOCUSED_SCALE;
+      const centerY = SVG_H / 2;
+
+      const tx = SVG_W / 2 - coords.cx * focusScale;
+      const ty = centerY - coords.cy * focusScale;
 
       svg.transition().duration(ZOOM_DURATION_MS).ease(d3.easeCubicInOut).call(
         zoom.transform,
-        d3.zoomIdentity.translate(tx, ty).scale(FOCUSED_SCALE)
+        d3.zoomIdentity.translate(tx, ty).scale(focusScale)
       );
 
       const egoSet = new Set(
