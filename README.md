@@ -1,6 +1,9 @@
 # Luke & Krizia — Wedding Constellation
 
-An interactive web app built as the digital counterpart to personalised wedding invitations. Each of 67 guests received a unique invite number; entering it here zooms the network into their personal constellation and reveals their place in our social world.
+Interactive network visualisation built as the digital counterpart to personalised wedding invitations. Each of 67 guests received a unique invite number; entering it here zooms the network into their personal constellation and reveals their place in our social world.
+
+- Live demo: [wedding-network.vercel.app](https://wedding-network.vercel.app)
+- Repository focus: visual storytelling, social network analysis, and polished interaction design
 
 ## What it does
 
