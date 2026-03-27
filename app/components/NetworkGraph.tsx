@@ -188,7 +188,9 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
         const PUSH_BASE  = 20;   // max push (px) at the epicentre
         const FALLOFF    = 220;  // exponential decay constant (px)
         const PUSH_MS    = 750;  // how long the outward drift takes
-        const RETURN_MS  = 2800; // smooth drift back — no bounce
+        const RETURN_MS  = 740;  // nearly matches the push so the return feels liquid
+        const TOTAL_WAVE_MS = PUSH_MS + RETURN_MS;
+        const OUTWARD_SHARE = PUSH_MS / TOTAL_WAVE_MS;
 
         svg.selectAll<SVGGElement, NetworkNode>('g.node').each(function (nd) {
           if (nd.id === d.id) return;
@@ -206,12 +208,15 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
 
           d3.select(this)
             .interrupt('wave')
-            // slowly drift outward as the wave arrives
-            .transition('wave').delay(delay).duration(PUSH_MS).ease(d3.easeQuadOut)
-            .attr('transform', `translate(${nc.cx + px},${nc.cy + py})`)
-            // then slowly, smoothly float back — no spring overshoot
-            .transition('wave').duration(RETURN_MS).ease(d3.easeCubicInOut)
-            .attr('transform', `translate(${nc.cx},${nc.cy})`);
+            // Use one continuous tween so the reversal does not inherit a visible handoff pause.
+            .transition('wave').delay(delay).duration(TOTAL_WAVE_MS).ease(d3.easeLinear)
+            .attrTween('transform', () => (t) => {
+              const waveT = t < OUTWARD_SHARE
+                ? d3.easeQuadOut(t / OUTWARD_SHARE)
+                : 1 - d3.easeSinOut((t - OUTWARD_SHARE) / (1 - OUTWARD_SHARE));
+
+              return `translate(${nc.cx + px * waveT},${nc.cy + py * waveT})`;
+            });
         });
       })
       // Restore if pointer leaves or touch is cancelled while held down
