@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8f5ef;
+  --background: #ede6d6;
   --foreground: #1c1917;
 }
 
@@ -18,37 +18,46 @@ body {
   font-family: var(--font-sans, 'Inter', sans-serif);
 }
 
-/* Serif utility */
 .font-serif {
   font-family: var(--font-serif, 'Cormorant Garamond', Georgia, serif);
 }
 
-/* ── Paper texture overlay ──────────────────────────────────────────────────
-   A subtle repeating grain texture gives the page a matte, printed-paper feel.
-   Rendered via an SVG feTurbulence filter at very low opacity.
-   ─────────────────────────────────────────────────────────────────────────── */
+/* ── Paper grain texture ────────────────────────────────────────────────── */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.04;
+  opacity: 0.065;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 300px 300px;
   background-repeat: repeat;
 }
 
-/* ── Node wobble animation ──────────────────────────────────────────────────
-   Each node's inner wobble group gets a staggered floating animation.
-   The amplitude is tiny (≤2px) so it reads as "suspended in space".
-   ─────────────────────────────────────────────────────────────────────────── */
+/* ── Natural lighting vignette ──────────────────────────────────────────── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  background: radial-gradient(
+    ellipse 90% 80% at 50% 38%,
+    rgba(255, 252, 244, 0.0) 0%,
+    rgba(255, 252, 244, 0.0) 28%,
+    rgba(148, 118, 78, 0.07) 65%,
+    rgba(110, 82, 45, 0.17) 100%
+  );
+}
+
+/* ── Node wobble animation ──────────────────────────────────────────────── */
 @keyframes nodeBob {
-  0%   { transform: translate(0px,   0px);   }
+  0%   { transform: translate(0px,    0px);   }
   25%  { transform: translate(2.2px, -3.0px); }
   50%  { transform: translate(-1.6px, 2.0px); }
   75%  { transform: translate(2.8px,  1.2px); }
-  100% { transform: translate(0px,   0px);   }
+  100% { transform: translate(0px,    0px);   }
 }
 
 .node-wobble {

@@ -39,7 +39,8 @@ export default function Home() {
   };
 
   return (
-    <main className="h-[100dvh] flex flex-col overflow-hidden bg-[#f8f5ef] text-stone-800">
+    <main className="h-[100dvh] flex flex-col overflow-hidden bg-[#ede6d6] text-stone-800 relative">
+      <div aria-hidden className="pointer-events-none absolute inset-2.5 z-50" style={{ border: '1px solid rgba(170,145,105,0.38)', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.65), inset 1px 0 0 rgba(255,255,255,0.45), inset 0 -1px 0 rgba(130,100,60,0.22), inset -1px 0 0 rgba(130,100,60,0.18)' }} />
 
       {/* ── Header ─────────────────────────────────────────────────── */}
       {/*
@@ -53,7 +54,7 @@ export default function Home() {
           'flex-none sm:flex sm:flex-row sm:items-end sm:justify-between sm:h-auto sm:px-7 sm:pt-6 sm:pb-3 sm:text-left',
           phase === 'entry'
             // Mobile entry: tall centred column
-            ? 'flex flex-col items-center justify-center text-center px-8 pt-10 pb-6 h-[38dvh]'
+            ? 'flex flex-col items-center justify-center text-center px-8 pt-8 pb-4 h-[26dvh]'
             // Mobile network: compact left-aligned row
             : 'flex flex-row items-end justify-between px-5 pt-5 pb-3',
         ].join(' ')}

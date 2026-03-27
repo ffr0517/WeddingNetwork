@@ -38,6 +38,29 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
     const svg = d3.select(svgRef.current!);
     svg.selectAll('*').remove();
 
+    const defs = svg.append('defs');
+
+    const shadowFilter = defs.append('filter')
+      .attr('id', 'disc-shadow')
+      .attr('x', '-50%').attr('y', '-50%')
+      .attr('width', '200%').attr('height', '200%');
+    shadowFilter.append('feDropShadow')
+      .attr('dx', '0.5').attr('dy', '1.8')
+      .attr('stdDeviation', '2.0')
+      .attr('flood-color', '#3a2408')
+      .attr('flood-opacity', '0.20');
+
+    const threadFilter = defs.append('filter')
+      .attr('id', 'thread-glow')
+      .attr('x', '-20%').attr('y', '-400%')
+      .attr('width', '140%').attr('height', '900%');
+    threadFilter.append('feGaussianBlur')
+      .attr('stdDeviation', '0.55')
+      .attr('result', 'blur');
+    const threadMerge = threadFilter.append('feMerge');
+    threadMerge.append('feMergeNode').attr('in', 'blur');
+    threadMerge.append('feMergeNode').attr('in', 'SourceGraphic');
+
     const g = svg.append('g').attr('class', 'graph-root');
     gRef.current = g.node();
 
@@ -56,7 +79,7 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
       .attr('y1', (d) => nodeCoords.current.get(d.source)?.cy ?? 0)
       .attr('x2', (d) => nodeCoords.current.get(d.target)?.cx ?? 0)
       .attr('y2', (d) => nodeCoords.current.get(d.target)?.cy ?? 0)
-      .attr('stroke', '#111')
+      .attr('stroke', '#b8935a')
       .attr('stroke-opacity', 0)
       .attr('stroke-width', 0.6);
 
@@ -71,9 +94,10 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
       .attr('y1', (d) => nodeCoords.current.get(d.source)?.cy ?? 0)
       .attr('x2', (d) => nodeCoords.current.get(d.target)?.cx ?? 0)
       .attr('y2', (d) => nodeCoords.current.get(d.target)?.cy ?? 0)
-      .attr('stroke', '#111')
-      .attr('stroke-opacity', 0.55)
-      .attr('stroke-width', 1.0);
+      .attr('stroke', '#b8935a')
+      .attr('stroke-opacity', 0.62)
+      .attr('stroke-width', 0.9)
+      .attr('filter', 'url(#thread-glow)');
 
     // Build community membership map for hover
     const communityMap = new Map<string, string>();
@@ -109,8 +133,19 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
       .attr('class', 'node-circle')
       .attr('r', (d) => scales.nodeRadius(d.size))
       .attr('fill', (d) => d.communityHex)
+      .attr('fill-opacity', 0.86)
+      .attr('filter', 'url(#disc-shadow)')
       .attr('stroke', 'none')
       .attr('stroke-width', 0);
+
+    wobbleGroups
+      .append('circle')
+      .attr('class', 'node-rim')
+      .attr('r', (d) => scales.nodeRadius(d.size) - 0.5)
+      .attr('fill', 'none')
+      .attr('stroke', 'rgba(255,255,255,0.22)')
+      .attr('stroke-width', 1.0)
+      .attr('pointer-events', 'none');
 
     wobbleGroups
       .append('circle')
@@ -303,7 +338,7 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
       const containerW = svgRef.current!.getBoundingClientRect().width || SVG_W;
       const isMobile = containerW < 640;
       const focusScale = isMobile ? 2.8 : FOCUSED_SCALE;
-      const centerY = SVG_H / 2;
+      const centerY = isMobile ? SVG_H * 0.36 : SVG_H / 2;
 
       const tx = SVG_W / 2 - coords.cx * focusScale;
       const ty = centerY - coords.cy * focusScale;
@@ -321,7 +356,7 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
       svg.selectAll<SVGLineElement, { source: string; target: string }>('line.adj')
         .transition().delay(700).duration(600)
         .attr('stroke-opacity', (d) =>
-          egoSet.has(`${d.source}-${d.target}`) ? 0.18 : 0
+          egoSet.has(`${d.source}-${d.target}`) ? 0.30 : 0
         );
 
       svg.selectAll<SVGGElement, NetworkNode>('g.node').each(function (d) {
@@ -343,6 +378,7 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
     <svg
       ref={svgRef}
       viewBox={`0 0 ${SVG_W} ${SVG_H}`}
+      preserveAspectRatio="xMidYMin meet"
       className="w-full h-full"
       style={{ overflow: 'visible' }}
     />
