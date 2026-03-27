@@ -5,16 +5,13 @@ import { useNetworkData } from './hooks/useNetworkData';
 import NetworkGraph from './components/NetworkGraph';
 import EntryForm from './components/EntryForm';
 import GuestCard from './components/GuestCard';
-import DemoNotice from './components/DemoNotice';
 import Legend from './components/Legend';
 import { NetworkNode } from './lib/types';
-import { DEMO_NODE_ID, WEDDING_DATE, WEDDING_VENUE, WEDDING_LOCATION } from './lib/constants';
+import { WEDDING_DATE, WEDDING_VENUE, WEDDING_LOCATION } from './lib/constants';
 
 export default function Home() {
   const data = useNetworkData();
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const [isDemo, setIsDemo] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
   const [phase, setPhase] = useState<'entry' | 'network'>('entry');
 
   const validIds = useMemo(
@@ -28,144 +25,91 @@ export default function Home() {
   );
 
   const handleSubmit = (id: string) => {
-    setIsDemo(false);
     setSelectedId(id);
-    setPhase('network');
-  };
-
-  const handleDemo = () => {
-    setIsDemo(true);
-    setSelectedId(DEMO_NODE_ID);
     setPhase('network');
   };
 
   const handleClose = () => {
     setSelectedId(null);
     setPhase('entry');
-    setIsDemo(false);
   };
 
   const handleNodeClick = (id: string) => {
-    if (id === selectedId) return;
-    // Clicking other nodes re-zooms but doesn't show their personal card
-    if (phase === 'network') {
-      setSelectedId(id);
-    }
+    if (id === selectedId || phase !== 'network') return;
+    setSelectedId(id);
   };
 
-  const bg = darkMode
-    ? 'bg-[#0e0c0a] text-stone-200'
-    : 'bg-[#faf8f4] text-stone-800';
-
-  const headerSubtle = darkMode ? 'text-stone-500' : 'text-stone-400';
-  const divider = darkMode ? 'border-stone-700' : 'border-stone-200';
-
   return (
-    <main
-      className={`h-screen flex flex-col overflow-hidden transition-colors duration-700 ${bg}`}
-    >
-      {/* ── Dark mode toggle ───────────────────────────────────────── */}
-      <button
-        onClick={() => setDarkMode((d) => !d)}
-        className={`absolute top-5 right-5 z-30 text-xs uppercase tracking-widest ${headerSubtle} hover:opacity-80 transition-opacity`}
-        aria-label="Toggle dark mode"
-      >
-        {darkMode ? '☀ light' : '✦ dark'}
-      </button>
+    <main className="h-screen flex flex-col overflow-hidden bg-[#f8f5ef] text-stone-800">
 
-      {/* ── Header ────────────────────────────────────────────────── */}
-      <header className="pt-10 pb-0 px-8 flex items-start justify-between">
+      {/* ── Header ─────────────────────────────────────────────────── */}
+      <header className="flex-none px-5 sm:px-7 pt-5 sm:pt-6 pb-3 flex items-end justify-between">
         <div>
-          <h1 className="font-serif text-4xl md:text-5xl tracking-tight leading-none">
+          <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl tracking-tight leading-none">
             Luke &amp; Krizia
           </h1>
-          <p className={`font-serif text-sm mt-1 italic ${headerSubtle}`}>
+          <p className="font-serif text-xs sm:text-sm mt-0.5 italic text-stone-800">
             invite you to celebrate their marriage
           </p>
         </div>
-        <div className={`text-right font-serif text-sm leading-relaxed ${headerSubtle} hidden md:block`}>
-          <p>{WEDDING_VENUE}</p>
-          <p>{WEDDING_LOCATION}</p>
-          <p className="mt-1">{WEDDING_DATE}</p>
+
+        {/* Venue details — desktop only */}
+        <div className="text-right font-serif text-sm leading-relaxed text-stone-800 hidden md:block">
+          <p>{WEDDING_VENUE} &middot; {WEDDING_LOCATION}</p>
+          <p>{WEDDING_DATE}</p>
         </div>
       </header>
 
-      <div className={`border-t mx-8 mt-6 ${divider}`} />
+      <div className="flex-none border-t mx-5 sm:mx-7 border-stone-200" />
 
-      {/* ── Graph + overlay ───────────────────────────────────────── */}
+      {/* ── Graph canvas ───────────────────────────────────────────── */}
       <div className="relative flex-1 min-h-0 overflow-hidden">
         {data ? (
           <NetworkGraph
             data={data}
             selectedId={selectedId}
-            darkMode={darkMode}
             onNodeClick={handleNodeClick}
           />
         ) : (
-          <div className={`absolute inset-0 flex items-center justify-center ${headerSubtle}`}>
+          <div className="absolute inset-0 flex items-center justify-center text-stone-700">
             <span className="font-serif text-sm animate-pulse">loading constellation…</span>
           </div>
         )}
 
-        {/* Demo notice */}
-        {isDemo && <DemoNotice darkMode={darkMode} />}
+        {/* Guest card — top on mobile so graph shows below, bottom-center on desktop */}
+        {phase === 'network' && (
+          <GuestCard node={selectedNode} onClose={handleClose} />
+        )}
 
-        {/* Reset button */}
+        {/* ← full view button */}
         {phase === 'network' && (
           <button
             onClick={handleClose}
-            className={`absolute top-4 left-4 z-20 text-xs uppercase tracking-widest transition-opacity
-              ${darkMode ? 'text-stone-500 hover:text-stone-200' : 'text-stone-400 hover:text-stone-700'}`}
+            className="absolute top-3 left-4 z-20 font-serif text-sm italic text-stone-800 hover:opacity-60 transition-opacity"
           >
             ← full view
           </button>
         )}
 
-        {/* Guest card */}
-        {phase === 'network' && (
-          <GuestCard
-            node={selectedNode}
-            isDemo={isDemo}
-            darkMode={darkMode}
-            onClose={handleClose}
-          />
-        )}
-
-        {/* Entry overlay */}
+        {/* Entry form:
+            mobile — full-width, centered, near bottom
+            desktop — fixed-width, right-aligned, bottom-right corner */}
         {phase === 'entry' && data && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none">
-            <div className="pointer-events-auto">
-              <EntryForm
-                validIds={validIds}
-                onSubmit={handleSubmit}
-                onDemo={handleDemo}
-                darkMode={darkMode}
-              />
-            </div>
+          <div className="absolute bottom-5 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 z-10">
+            <EntryForm validIds={validIds} onSubmit={handleSubmit} />
           </div>
         )}
       </div>
 
-      <div className={`border-t mx-8 ${divider}`} />
+      <div className="flex-none border-t mx-5 sm:mx-7 border-stone-200" />
 
-      {/* ── Footer / legend ───────────────────────────────────────── */}
-      <footer className="px-8 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        {data && <Legend communities={data.communities} darkMode={darkMode} />}
-        <div className={`font-serif text-xs italic ${headerSubtle} text-right`}>
-          {data && (
-            <>
-              {data.meta.nodeCount} guests &middot;{' '}
-              {data.meta.edgeCount} connections &middot;{' '}
-              {data.meta.communityCount} communities
-            </>
-          )}
-        </div>
+      {/* ── Footer ─────────────────────────────────────────────────── */}
+      <footer className="flex-none px-5 sm:px-7 py-2.5 flex items-center justify-between text-stone-800">
+        {data && <Legend communities={data.communities} />}
+        <p className="font-serif text-sm italic hidden sm:block">
+          {data && `${data.meta.nodeCount} guests · ${data.meta.edgeCount} connections · ${data.meta.communityCount} communities`}
+        </p>
       </footer>
-
-      {/* Mobile venue details */}
-      <div className={`px-8 pb-6 font-serif text-xs text-center ${headerSubtle} md:hidden`}>
-        {WEDDING_VENUE} &middot; {WEDDING_LOCATION} &middot; {WEDDING_DATE}
-      </div>
     </main>
   );
 }

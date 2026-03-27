@@ -4,14 +4,11 @@ import { Community } from '../lib/types';
 
 interface Props {
   communities: Community[];
-  darkMode: boolean;
 }
 
-export default function Legend({ communities, darkMode }: Props) {
-  const text = darkMode ? 'text-stone-400' : 'text-stone-500';
-
+export default function Legend({ communities }: Props) {
   return (
-    <div className={`flex flex-wrap gap-x-5 gap-y-2 text-xs ${text}`}>
+    <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-stone-800">
       {communities.map((c) => (
         <div key={c.name} className="flex items-center gap-1.5">
           <span

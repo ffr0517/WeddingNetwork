@@ -5,23 +5,16 @@ import { useState } from 'react';
 interface Props {
   validIds: Set<string>;
   onSubmit: (id: string) => void;
-  onDemo: () => void;
-  darkMode: boolean;
 }
 
-export default function EntryForm({ validIds, onSubmit, onDemo, darkMode }: Props) {
+export default function EntryForm({ validIds, onSubmit }: Props) {
   const [value, setValue] = useState('');
   const [error, setError] = useState('');
 
-  const border = darkMode ? 'border-stone-600 focus:border-stone-300' : 'border-stone-300 focus:border-stone-700';
-  const bg = darkMode ? 'bg-stone-800/60 text-stone-100 placeholder-stone-500' : 'bg-white/60 text-stone-800 placeholder-stone-400';
-  const btnBg = darkMode ? 'bg-stone-100 text-stone-900 hover:bg-white' : 'bg-stone-800 text-white hover:bg-stone-900';
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const id = value.trim().toUpperCase();
-    // Try exact match first, then as numeric string
-    const match = validIds.has(id) ? id : validIds.has(value.trim()) ? value.trim() : null;
+    const idUpper = value.trim().toUpperCase();
+    const match = validIds.has(idUpper) ? idUpper : validIds.has(value.trim()) ? value.trim() : null;
     if (match) {
       setError('');
       onSubmit(match);
@@ -31,36 +24,35 @@ export default function EntryForm({ validIds, onSubmit, onDemo, darkMode }: Prop
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col items-center gap-3 w-full max-w-xs">
+    <form onSubmit={handleSubmit} className="flex flex-col items-end gap-2 w-full sm:w-64">
       <input
         type="text"
         value={value}
         onChange={(e) => { setValue(e.target.value); setError(''); }}
         placeholder="your invite number"
-        className={`
-          w-full text-center font-serif text-lg px-4 py-3
-          border backdrop-blur-sm rounded-sm outline-none
-          transition-colors duration-200
-          ${border} ${bg}
-        `}
+        className="
+          w-full text-center font-serif text-base px-3 py-2
+          border border-stone-300 focus:border-stone-500
+          bg-white/50 text-stone-700 placeholder-stone-300
+          backdrop-blur-sm outline-none
+          transition-colors duration-200 rounded-none
+        "
         autoComplete="off"
         spellCheck={false}
       />
       {error && (
-        <p className="text-xs text-[#902125] text-center">{error}</p>
+        <p className="text-xs text-[#902125] text-right leading-tight">{error}</p>
       )}
       <button
         type="submit"
-        className={`w-full py-3 text-sm uppercase tracking-widest transition-colors duration-200 rounded-sm ${btnBg}`}
+        className="
+          w-full py-2 font-serif text-xs uppercase tracking-[0.2em]
+          border border-stone-500 text-stone-800
+          hover:border-stone-900 hover:text-stone-900
+          transition-colors duration-200
+        "
       >
-        Find my constellation
-      </button>
-      <button
-        type="button"
-        onClick={onDemo}
-        className={`text-xs underline underline-offset-4 mt-1 ${darkMode ? 'text-stone-400 hover:text-stone-200' : 'text-stone-400 hover:text-stone-700'} transition-colors`}
-      >
-        Just visiting? View demo
+        find my constellation
       </button>
     </form>
   );

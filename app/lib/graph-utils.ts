@@ -33,12 +33,17 @@ export function getBounds(nodes: NetworkNode[]) {
   };
 }
 
-/** Map raw R coordinates into SVG space */
+/** Map raw R coordinates into SVG space.
+ *
+ * nodeRadius uses the igraph-accurate formula:
+ *   igraph draws vertex with radius = vertex.size / 200  (in layout coordinate units)
+ *   We convert that to SVG pixels using the same scale factor as the positions.
+ */
 export function makeScales(
   nodes: NetworkNode[],
   svgWidth: number,
   svgHeight: number,
-  padding = 60
+  padding = 80
 ) {
   const bounds = getBounds(nodes);
   const rangeX = bounds.maxX - bounds.minX || 1;
@@ -49,9 +54,12 @@ export function makeScales(
   );
   const offsetX = (svgWidth - rangeX * scale) / 2 - bounds.minX * scale;
   const offsetY = (svgHeight - rangeY * scale) / 2 - bounds.minY * scale;
+
   return {
+    // R uses y-up; SVG uses y-down — flip y to match PDF orientation
     x: (raw: number) => raw * scale + offsetX,
-    y: (raw: number) => raw * scale + offsetY,
-    nodeRadius: (size: number) => (size / 110) * 18 + 3,
+    y: (raw: number) => svgHeight - (raw * scale + offsetY),
+    // igraph: radius_in_coords = vertex.size / 200 → radius_in_px = (vertex.size/200) * scale
+    nodeRadius: (size: number) => Math.max((size / 200) * scale, 2),
   };
 }
