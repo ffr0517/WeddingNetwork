@@ -322,7 +322,7 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
         );
         svg.selectAll<SVGLineElement, unknown>('line.adj')
           .transition().duration(400).attr('stroke-opacity', 0);
-        svg.selectAll<SVGGElement, NetworkNode>('g.node').each(function (d) {
+        svg.selectAll<SVGGElement, NetworkNode>('g.node').each(function () {
           d3.select(this).select('.node-ring').attr('stroke-width', 0).attr('opacity', 0);
           d3.select(this).select('.node-circle').attr('stroke', 'none').attr('stroke-width', 0);
         });
@@ -332,13 +332,18 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
       const coords = nodeCoords.current.get(nodeId);
       if (!coords) return;
 
-      // On mobile the graph is constrained to 45dvh (a fixed-height container),
-      // so SVG_H/2 centres the node correctly within that area.
-      // Use a gentler zoom scale so the node doesn't fill the whole small area.
-      const containerW = svgRef.current!.getBoundingClientRect().width || SVG_W;
-      const isMobile = containerW < 640;
-      const focusScale = isMobile ? 2.8 : FOCUSED_SCALE;
-      const centerY = isMobile ? SVG_H * 0.36 : SVG_H / 2;
+      const svgEl = svgRef.current;
+      if (!svgEl) return;
+
+      const { width: viewportW = SVG_W, height: viewportH = SVG_H } = svgEl.getBoundingClientRect();
+      const isMobile = viewportW < 640;
+      const focusScale = isMobile ? 2.55 : FOCUSED_SCALE;
+
+      // On mobile the SVG is letterboxed vertically inside a fixed-height panel.
+      // Anchor the selected node to the panel midpoint, not the raw viewBox midpoint,
+      // so it sits evenly between the top edge and the card that begins below.
+      const baseViewportScale = Math.min(viewportW / SVG_W, viewportH / SVG_H) || 1;
+      const centerY = isMobile ? (viewportH * 0.5) / baseViewportScale : SVG_H / 2;
 
       const tx = SVG_W / 2 - coords.cx * focusScale;
       const ty = centerY - coords.cy * focusScale;

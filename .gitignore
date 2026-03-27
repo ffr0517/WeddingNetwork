@@ -46,3 +46,9 @@ next-env.d.ts
 *.Rhistory
 *.RProj
 *.Rproj
+.playwright-cli/page-2026-03-27T18-18-05-313Z.yml
+.playwright-cli/page-2026-03-27T18-18-11-044Z.yml
+.playwright-cli/page-2026-03-27T18-18-38-050Z.yml
+.playwright-cli/page-2026-03-27T18-18-39-236Z.yml
+.playwright-cli/page-2026-03-27T18-18-40-236Z.png
+.playwright-cli

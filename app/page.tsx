@@ -40,7 +40,14 @@ export default function Home() {
 
   return (
     <main className="h-[100dvh] flex flex-col overflow-hidden bg-[#ede6d6] text-stone-800 relative">
-      <div aria-hidden className="pointer-events-none absolute inset-2.5 z-50" style={{ border: '1px solid rgba(170,145,105,0.38)', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.65), inset 1px 0 0 rgba(255,255,255,0.45), inset 0 -1px 0 rgba(130,100,60,0.22), inset -1px 0 0 rgba(130,100,60,0.18)' }} />
+      <div
+        aria-hidden
+        className={[
+          'pointer-events-none absolute inset-2.5 z-50 transition-opacity duration-1000 ease-out',
+          phase === 'network' ? 'opacity-0 sm:opacity-100' : 'opacity-100',
+        ].join(' ')}
+        style={{ border: '1px solid rgba(170,145,105,0.38)', boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.65), inset 1px 0 0 rgba(255,255,255,0.45), inset 0 -1px 0 rgba(130,100,60,0.22), inset -1px 0 0 rgba(130,100,60,0.18)' }}
+      />
 
       {/* ── Header ─────────────────────────────────────────────────── */}
       {/*
