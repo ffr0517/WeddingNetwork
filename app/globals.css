@@ -72,7 +72,6 @@ body::after {
 }
 
 .node-repel {
-  transition: transform 0.14s ease-out;
   will-change: transform;
 }
 

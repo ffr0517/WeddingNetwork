@@ -38,29 +38,6 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
     const svg = d3.select(svgRef.current!);
     svg.selectAll('*').remove();
 
-    const defs = svg.append('defs');
-
-    const shadowFilter = defs.append('filter')
-      .attr('id', 'disc-shadow')
-      .attr('x', '-50%').attr('y', '-50%')
-      .attr('width', '200%').attr('height', '200%');
-    shadowFilter.append('feDropShadow')
-      .attr('dx', '0.5').attr('dy', '1.8')
-      .attr('stdDeviation', '2.0')
-      .attr('flood-color', '#3a2408')
-      .attr('flood-opacity', '0.20');
-
-    const threadFilter = defs.append('filter')
-      .attr('id', 'thread-glow')
-      .attr('x', '-20%').attr('y', '-400%')
-      .attr('width', '140%').attr('height', '900%');
-    threadFilter.append('feGaussianBlur')
-      .attr('stdDeviation', '0.55')
-      .attr('result', 'blur');
-    const threadMerge = threadFilter.append('feMerge');
-    threadMerge.append('feMergeNode').attr('in', 'blur');
-    threadMerge.append('feMergeNode').attr('in', 'SourceGraphic');
-
     const g = svg.append('g').attr('class', 'graph-root');
     gRef.current = g.node();
 
@@ -96,8 +73,8 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
       .attr('y2', (d) => nodeCoords.current.get(d.target)?.cy ?? 0)
       .attr('stroke', '#b8935a')
       .attr('stroke-opacity', 0.62)
-      .attr('stroke-width', 0.9)
-      .attr('filter', 'url(#thread-glow)');
+      .attr('stroke-width', 1.1)
+      .attr('stroke-linecap', 'round');
 
     // Build community membership map for hover
     const communityMap = new Map<string, string>();
@@ -128,13 +105,25 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
       .attr('class', 'node-wobble')
       .style('animation-delay', (_, i) => `${-(i * 0.41).toFixed(2)}s`);
 
+    // Static shadow disc — replaces the per-frame `disc-shadow` SVG filter that
+    // had to re-rasterize on every wobble frame for every node. A plain circle
+    // composites on the GPU for free.
+    wobbleGroups
+      .append('circle')
+      .attr('class', 'node-shadow')
+      .attr('r', (d) => scales.nodeRadius(d.size))
+      .attr('cx', 0.5)
+      .attr('cy', 1.8)
+      .attr('fill', '#3a2408')
+      .attr('fill-opacity', 0.18)
+      .attr('pointer-events', 'none');
+
     wobbleGroups
       .append('circle')
       .attr('class', 'node-circle')
       .attr('r', (d) => scales.nodeRadius(d.size))
       .attr('fill', (d) => d.communityHex)
       .attr('fill-opacity', 0.86)
-      .attr('filter', 'url(#disc-shadow)')
       .attr('stroke', 'none')
       .attr('stroke-width', 0);
 
@@ -280,30 +269,69 @@ export default function NetworkGraph({ data, selectedId, onNodeClick }: Props) {
     // ── Cursor repulsion ────────────────────────────────────────────────────
     const REPEL_RADIUS = 100; // SVG user units
     const REPEL_MAX    = 10;  // max push in SVG user units
+    const REPEL_RADIUS_SQ = REPEL_RADIUS * REPEL_RADIUS;
+
+    // Cache the DOM node + last-applied state for each repel group so we can
+    // skip redundant style writes when nothing has changed (the common case
+    // for nodes far from the cursor).
+    type RepelEntry = { el: SVGGElement; nodeR: number; coords: { cx: number; cy: number }; cleared: boolean };
+    const repelEntries: RepelEntry[] = [];
+    repelGroups.each(function (d) {
+      repelEntries.push({
+        el: this as SVGGElement,
+        nodeR: scales.nodeRadius(d.size),
+        coords: nodeCoords.current.get(d.id)!,
+        cleared: true,
+      });
+    });
+
+    let rafScheduled = false;
+    let lastMx = 0;
+    let lastMy = 0;
+
+    const applyRepel = () => {
+      rafScheduled = false;
+      for (let i = 0; i < repelEntries.length; i++) {
+        const entry = repelEntries[i];
+        const dx = entry.coords.cx - lastMx;
+        const dy = entry.coords.cy - lastMy;
+        const distSq = dx * dx + dy * dy;
+
+        if (distSq >= REPEL_RADIUS_SQ || distSq <= entry.nodeR * entry.nodeR) {
+          if (!entry.cleared) {
+            entry.el.style.transform = '';
+            entry.cleared = true;
+          }
+          continue;
+        }
+
+        const dist = Math.sqrt(distSq);
+        const mag = REPEL_MAX * Math.pow(1 - dist / REPEL_RADIUS, 1.5);
+        const rx = (dx / dist) * mag;
+        const ry = (dy / dist) * mag;
+        entry.el.style.transform = `translate(${rx.toFixed(2)}px,${ry.toFixed(2)}px)`;
+        entry.cleared = false;
+      }
+    };
 
     svg.on('mousemove.repel', (event) => {
       const svgEl = svgRef.current!;
       const t = d3.zoomTransform(svgEl);
       const [mx, my] = t.invert(d3.pointer(event, svgEl));
-
-      repelGroups.each(function (d) {
-        const c = nodeCoords.current.get(d.id)!;
-        const dx = c.cx - mx;
-        const dy = c.cy - my;
-        const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-        const nodeR = scales.nodeRadius(d.size);
-        // Only repel when cursor is outside the node but within the influence radius
-        if (dist > nodeR && dist < REPEL_RADIUS) {
-          const mag = REPEL_MAX * Math.pow(1 - dist / REPEL_RADIUS, 1.5);
-          const rx = (dx / dist) * mag;
-          const ry = (dy / dist) * mag;
-          d3.select(this).style('transform', `translate(${rx.toFixed(2)}px,${ry.toFixed(2)}px)`);
-        } else {
-          d3.select(this).style('transform', null);
-        }
-      });
+      lastMx = mx;
+      lastMy = my;
+      if (!rafScheduled) {
+        rafScheduled = true;
+        requestAnimationFrame(applyRepel);
+      }
     }).on('mouseleave.repel', () => {
-      repelGroups.style('transform', null);
+      for (let i = 0; i < repelEntries.length; i++) {
+        const entry = repelEntries[i];
+        if (!entry.cleared) {
+          entry.el.style.transform = '';
+          entry.cleared = true;
+        }
+      }
     });
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
